@@ -1,6 +1,6 @@
 import { Div, Img, H1 } from './LoadingStyled';
 import React from 'react';
-import gif from '../../loading.gif';
+import gif from '../../images/loading.gif';
 
 const Loading = () => {
     return (

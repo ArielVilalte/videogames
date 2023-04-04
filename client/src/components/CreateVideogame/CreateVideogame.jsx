@@ -4,7 +4,7 @@ import FormInput from '../FormInput/FormInput';
 import axios from 'axios';
 import { getPlatforms, getVideogames, getGenres } from '../../redux/actions';
 import { Link } from 'react-router-dom';
-import gameCreatedImg from '../../success.png';
+import gameCreatedImg from '../../images/success.png';
 import { 
     Form, 
     DivContainer, 

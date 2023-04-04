@@ -8,7 +8,7 @@ const DivContainer = styled.div`
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 99vw;
 `;
 
 const Div = styled.div`
@@ -16,6 +16,7 @@ const Div = styled.div`
     flex-direction: column;
     align-items: center;
     width: 80%;
+    margin-bottom: -30px;
 `;
 
 const Ul = styled.ul`

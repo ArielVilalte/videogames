@@ -8,11 +8,9 @@ import {
     FILTER_BY_SOURCE,
     SORT_ALPHABETICALLY,
     SORT_BY_RATING,
-    SET_CURRENT_PAGE,
     GET_PLATFORMS,
     GET_VIDEOGAME_DETAILS,
-    CLEAR_VIDEOGAME_DETAILS,
-    FILTRAR_RATE_MAYOR_CUATRO
+    CLEAR_VIDEOGAME_DETAILS
 } from '../types';
 
 const initialState = {
@@ -23,12 +21,7 @@ const initialState = {
     genres: [],
     platforms: [],
     videogameDetails: {},
-    errorMessage: '',
-    pagination: {
-        indexOfLastGame: 15,
-        indexOfFirstGame: 0,
-        currentPage: 1
-    }
+    errorMessage: ''
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -202,15 +195,6 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 videogames: state.videogames
             }
-        case SET_CURRENT_PAGE:
-            return {
-                ...state,
-                pagination: {
-                    indexOfLastGame: action.payload * 15,
-                    indexOfFirstGame: (action.payload * 15) - 15,
-                    currentPage: action.payload
-                }
-            }
         case GET_PLATFORMS:
             const allPlatforms = state.allVideogames.map(game => game.platforms).flat();
             const platforms = [...new Set(allPlatforms)];
@@ -249,12 +233,6 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 videogameDetails: {},
                 errorMessage: ''
-            }
-        case FILTRAR_RATE_MAYOR_CUATRO: 
-            const juegosFiltrados = state.videogames.filter(game => game.rating >= 4);
-            return {
-                ...state,
-                videogames: juegosFiltrados
             }
         default: 
             return {

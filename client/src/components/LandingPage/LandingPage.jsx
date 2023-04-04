@@ -1,7 +1,7 @@
 import { Div, Button, Img } from './LandingPageStyled';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../logo.jpg';
+import logo from '../../images/logo.jpg';
 
 const LandingPage = () => {
     return (

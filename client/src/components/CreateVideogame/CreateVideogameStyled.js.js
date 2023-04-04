@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import background from '../../background.jpg';
-import createVideogameImg from '../../createVideogame.jpg';
+import background from '../../images/background.jpg';
+import createVideogameImg from '../../images/createVideogame.jpg';
 
 const DivContainer = styled.div`  
     //background-color: #D3D3D3;

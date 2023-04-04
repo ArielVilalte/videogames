@@ -2,7 +2,7 @@ import { Input, Img, Div } from './SearchBarStyled';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getSearchVideogames, clearVideogames } from '../../redux/actions';
-import lupa from '../../lupa.png';
+import lupa from '../../images/lupa.png';
 
 const SearchBar = () => {
     const [videogameName, setVideogameName] = useState('');

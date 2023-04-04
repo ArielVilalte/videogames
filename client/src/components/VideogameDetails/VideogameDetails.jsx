@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideogameDetails, cleanVideogameDetails } from '../../redux/actions';
 import Loading from '../Loading/Loading';
-import siteNotFoundImg from '../../errorImg.png';
+import siteNotFoundImg from '../../images/errorImg.png';
 
 const VideogameDetails = () => {
     const { id } = useParams();

@@ -19,7 +19,7 @@ const Button2 = styled.button`
     cursor: pointer;
     width: 50px;
     height: 25px;
-    margin: 10px 10px 30px 10px;
+    margin: 10px 10px 10px 10px;
     border: 2px solid #190f2a;
     border-radius: 5px;
     background-color: #f5c150;
@@ -32,7 +32,7 @@ const Button2 = styled.button`
         visibility: visible;
     `}
         
-    ${props => props.currentPage < props.pageNumbers && props.name === 'next' && css`
+    ${props => props.currentPage < Math.ceil(props.totalGames/15) && props.name === 'next' && css`
         visibility: visible;
     `}
 `;
@@ -40,8 +40,10 @@ const Button2 = styled.button`
 const Div = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     width: 40%;
+    margin-bottom: 10px;
 `;
 
 export {

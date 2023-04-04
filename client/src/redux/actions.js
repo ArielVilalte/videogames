@@ -8,12 +8,10 @@ import {
     RESTART_VIDEOGAMES, 
     FILTER_BY_SOURCE, 
     SORT_ALPHABETICALLY,
-    SET_CURRENT_PAGE,
     SORT_BY_RATING,
     GET_PLATFORMS,
     GET_VIDEOGAME_DETAILS,
-    CLEAR_VIDEOGAME_DETAILS,
-    FILTRAR_RATE_MAYOR_CUATRO
+    CLEAR_VIDEOGAME_DETAILS
 } from '../types';
 
 
@@ -88,13 +86,6 @@ export const sortByRating = option => {
     }
 };
 
-export const setCurrentPage = page => {
-    return {
-        type: SET_CURRENT_PAGE,
-        payload: page
-    }
-};
-
 export const getPlatforms = () => {
     return {
         type: GET_PLATFORMS
@@ -117,8 +108,3 @@ export const cleanVideogameDetails = () => {
     }
 };
 
-export const filtarRateMayorCuatro = () => {
-    return {
-        type: FILTRAR_RATE_MAYOR_CUATRO
-    }
-}
